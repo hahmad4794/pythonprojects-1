@@ -25,4 +25,13 @@ pipeline {
             } //steps
         } //stage
     } //stages
+    post {
+        always {
+            sh """ 
+                rm -f importantfile1
+                rm -f importantfile2
+                rm -f importantfile3
+            """
+        }    
+    }
 } //pipeline
